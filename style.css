@@ -1,0 +1,82 @@
+:root{
+    --current_col:#deb841;
+    --default_col:rgb(73, 73, 73);
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+.field-container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:16px;
+}
+
+.field{
+    width: 60vw;
+    height: 30vw;
+    display: grid;
+    grid-template-columns: repeat(35,1fr);
+    grid-template-rows: repeat(20,1f);
+    gap:1px;
+    /*border: 1px solid black;*/
+
+}
+
+.color-palette{
+    display: flex;
+    min-height: 30vw;
+    width: 2vw;
+    flex-direction: column;
+    gap:10px;
+    border: 1px solid rgb(255, 255, 255);
+}
+.color-cell, tool-cell{
+    background-color: var(--default-col);
+    cursor:pointer;
+    border: 1px solid rgb(255, 255, 255);
+    aspect-ratio: 1/1;
+    width: 100%
+}
+
+ .color-cell.grey{
+    background: rgb(73, 73, 73);
+}
+
+.color-cell.grey-blue{
+    background: #DEE5E5;
+}
+
+.color-cell.mint{
+    background: #9DC5BB;
+}
+
+.color-cell.hooker-green{
+    background: #17B890;
+}
+
+.color-cell.dark-green{
+    background: #082D0F;
+}
+
+.tool-cell{
+  background: transparent;
+  border: 1px solid white;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tool-cell img{
+  width: 80%;
+}
+
+.selected{
+    border: 3px solid white;
+}
